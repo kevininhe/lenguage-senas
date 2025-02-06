@@ -1,18 +1,18 @@
-# 🎈 Blank app template
+# Detección de letras en imagen - Lenguage de señas
 
-A simple Streamlit app template for you to modify!
+En este aplicativo se usa un modelo de IA de detección de imágenes de lenguage de señas para establecer la letra que se está comunicando en la imagen.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://lenguaje-senas.streamlit.app/)
 
-### How to run it on your own machine
+### ¿Cómo ejecutarlo localmente?
 
-1. Install the requirements
+1. Instalar las dependencias
 
    ```
    $ pip install -r requirements.txt
    ```
 
-2. Run the app
+2. Ejecutar la aplicación
 
    ```
    $ streamlit run streamlit_app.py
