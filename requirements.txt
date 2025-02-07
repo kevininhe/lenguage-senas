@@ -1,3 +1,5 @@
 streamlit
 keras
 tensorflow
+pillow
+pillow-heif
