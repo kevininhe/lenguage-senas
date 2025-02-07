@@ -2,6 +2,7 @@ import pickle
 import numpy as np
 from PIL import Image
 from pillow_heif import register_heif_opener
+from PIL import ImageOps
 
 def predecirSigno(imagenCsv):
     # Abrir el archivo en el que se encuentra guardado el modelo de IA, y guardarlo en una variable
@@ -16,6 +17,9 @@ register_heif_opener()
 def convertirImagenAArreglo(image_path):
     # Abrir la imagen
     img = Image.open(image_path)
+
+    # Quite el tag de orientación EXIF, para que las fotos subidas desde el celular no se roten
+    img = ImageOps.exif_transpose(img)
 
     # Convertirla a blanco y negro
     img = img.convert('L')
