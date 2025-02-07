@@ -4,9 +4,7 @@ import numpy as np
 from PIL import Image
 from pillow_heif import register_heif_opener
 
-def predecirSigno(imagenCsv=None):
-    # Abrir la imagen
-    imagenCsv = pd.read_csv("ejemplo/image_1.csv",header=None)
+def predecirSigno(imagenCsv):
     with open('model/modelo_clasificacion_lenguaje.pkl', 'rb') as modeloAr:
         modeloLenguaje = pickle.load(modeloAr)
     return np.argmax(modeloLenguaje.predict(imagenCsv))
